@@ -12,8 +12,8 @@ public class IntakeController
 {
 
     @GetMapping("/greeting")
-    public ResponseEntity<String> greentings()
+    public ResponseEntity<String> greetings()
     {
-        return ResponseEntity.ok("This is testing at Azure Portal");
+        return ResponseEntity.ok("Welcome to Azure Portal");
     }
 }
