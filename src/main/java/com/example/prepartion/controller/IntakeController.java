@@ -2,9 +2,7 @@ package com.example.prepartion.controller;
 
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -15,5 +13,12 @@ public class IntakeController
     public ResponseEntity<String> greetings()
     {
         return ResponseEntity.ok("Welcome to Azure Portal");
+    }
+
+    @PostMapping("/{id}")
+    public ResponseEntity<String> postMethodTest(@PathVariable String id)
+    {
+        String welcome = "Welcome to Azure Portal first message " + id;
+        return ResponseEntity.ok(welcome);
     }
 }
